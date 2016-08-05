@@ -19,6 +19,11 @@ public class UserController {
         return "html/hello";
     }
 
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String home() {
+        return "html/home";
+    }
+
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
     public String delete() {
         return "html/delete";

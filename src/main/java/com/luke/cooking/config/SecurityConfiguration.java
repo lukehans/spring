@@ -21,9 +21,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/delete/**").hasAuthority("ADMIN")
-                .anyRequest().authenticated()
-
-                .and()
+                .anyRequest().authenticated().and()
                 .formLogin().and()
                 .httpBasic();
     }
